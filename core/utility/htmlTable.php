@@ -5,7 +5,7 @@ namespace utility;
 
 class htmlTable
 {
-    public static function genarateTableFromMultiArray($array)
+    public static function generateTableFromMultiArray($array)
     {
 
         $tableGen = '<table border="1"cellpadding="10">';
@@ -43,12 +43,17 @@ class htmlTable
 
         $tableGen .= '<tr>';
         foreach ($innerArray as $innerRow => $value) {
-            $tableGen .= '<th>' . $innerRow . '</th>';
+            if ($innerRow != 'id') {
+                    $tableGen .= '<th>' . $innerRow . '</th>';
+                }
         }
         $tableGen .= '</tr>';
 
-        foreach ($innerArray as $value) {
-            $tableGen .= '<td>' . $value . '</td>';
+        foreach ($innerArray as $innerRow=>$value) {
+            
+            if ($innerRow != 'id') {                
+                    $tableGen .= '<td>' . $value . '</td>';
+                }           
         }
 
         $tableGen .= '</tr></table><hr>';
