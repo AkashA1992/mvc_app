@@ -19,7 +19,6 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-
 print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
