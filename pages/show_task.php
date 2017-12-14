@@ -21,6 +21,17 @@
 //this is how you print something  $data contains the record that was selected on the table.
 print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
+<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+
+    Owner Email: <input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>"><br>
+    Owner Id: <input type="text" name="ownerid" value="<?php echo $data->ownerid; ?>"><br>
+    Create Date: <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"><br>
+    Due Date: <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"><br>
+    Message: <input type="text" name="message" value="<?php echo $data->message; ?>"><br>
+    IsDone: <input type="text" name="isdone" value="<?php echo $data->isdone; ?>"><br>
+    <input type="submit" value="Update Record">
+</form>
+
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
