@@ -17,17 +17,9 @@
 
 <body>
 
-<h1>Email: <?php echo $data->email; ?></h1>
-<h1>First Name: <?php echo $data->fname; ?></h1>
-<h1>Last Name: <?php echo $data->lname; ?></h1>
-
-
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-
 print utility\htmlTable::generateTableFromOneRecord($data);
-
-
 ?>
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
