@@ -16,8 +16,10 @@ class htmlTable
         $fieldHeadings = array_keys($fieldHeadings);
         //this gets the page being viewed so that the table routes requests to the correct controller
         $referingPage = $_REQUEST['page'];
-        foreach ($fieldHeadings as $heading) {
-            $tableGen .= '<th>' . $heading . '</th>';
+        foreach ($fieldHeadings as $value) {
+            if($value != 'password'){
+            $tableGen .= '<th>' . $value . '</th>';
+            }
         }
         $tableGen .= '</tr>';
         foreach ($array as $record) {
@@ -26,7 +28,9 @@ class htmlTable
                 if ($key == 'id') {
                     $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>';
                 } else {
-                    $tableGen .= '<td>' . $value . '</td>';
+                    if($key != 'password'){
+                        $tableGen .= '<td>' . $value . '</td>';
+                    }
                 }
             }
             $tableGen .= '</tr>';
