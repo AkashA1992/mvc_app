@@ -107,7 +107,7 @@ class accountsController extends http\controller
         $record->delete();
         header("Location: index.php?page=accounts&action=all");
     }
-
+    
     //this is to login, here is where you find the account and allow login or deny.
     public static function login()
     {
@@ -127,13 +127,14 @@ class accountsController extends http\controller
 
             if($user->checkPassword($_POST['password']) == TRUE) {
 
-                echo 'login';
+                //echo 'login';
 
                 session_start();
                 $_SESSION["userID"] = $user->id;
-
+                
                 //forward the user to the show all todos page
-                print_r($_SESSION);
+                //print_r($user->id);
+                self::getTemplate('loggedIn', $user);
             } else {
                 echo 'password does not match';
             }
