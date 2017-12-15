@@ -68,9 +68,25 @@ class tasksController extends http\controller
 
     }
 
+    public static function insertTask() {
+       self::getTemplate('insert_task');
+
+    }
+    
+    public static function getIfSet(&$value, $default = null){
+        return isset($value) ? $value : $default;
+    }
+    
     public static function save() {
                
-        $user = todos::findOne($_REQUEST['id']);
+        $user = new todo();
+
+        $id = tasksController::getIfSet($_REQUEST['id']);
+        if(!is_null($id)){
+            $user = todos::findOne($_REQUEST['id']);
+        }
+        //if(isset(
+        //$user = todos::findOne($_REQUEST['id']);
 
         $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];

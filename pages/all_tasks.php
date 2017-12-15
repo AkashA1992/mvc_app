@@ -24,7 +24,9 @@ print utility\htmlTable::generateTableFromMultiArray($data);
 
 
 ?>
-
+<form action="index.php?page=tasks&action=insertTask" method="post" id="formInsert">
+    <button type="submit" form="formInsert" value="insert">Insert New Task</button>
+</form>
 
 <script src="js/scripts.js"></script>
 </body>

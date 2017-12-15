@@ -104,7 +104,14 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'delete';
         $routes[] = $route;
-
+        
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'insertTask';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'insertTask';
+        $routes[] = $route;
 
         $route = new route();
         $route->http_method = 'POST';
