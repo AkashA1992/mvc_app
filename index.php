@@ -1,3 +1,7 @@
+<html>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+</html>
+
 <?php
 
 //turn on debugging messages

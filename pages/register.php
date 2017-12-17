@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <!doctype html>
 
 <html lang="en">
@@ -16,20 +17,40 @@
 </head>
 
 <body>
-
+<div class="container">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-3"><h3>Account Registration</h3></div>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-5">
 
 <form action="index.php?page=accounts&action=register" method="post">
-    First name: <input type="text" name="fname"><br>
+
+    <div class="row"><div class="col-sm-3">First name: </div><div class="col-sm-2"><input type="text" name="fname"><br></div></div>
+    <div class="row"><div class="col-sm-3">Last name: </div><div class="col-sm-2"><input type="text" name="lname"><br></div></div>
+    <div class="row"><div class="col-sm-3">Email: </div><div class="col-sm-2"><input type="text" name="email"><br></div></div>
+    <div class="row"><div class="col-sm-3">Phone: </div><div class="col-sm-2"><input type="text" name="phone"><br></div></div>
+    <div class="row"><div class="col-sm-3">Birthday: </div><div class="col-sm-2"><input type="text" name="birthday"><br></div></div>
+    <div class="row"><div class="col-sm-3">Gender: </div><div class="col-sm-2"><input type="text" name="gender"><br></div></div>
+    <div class="row"><div class="col-sm-3">Password: </div><div class="col-sm-2"><input type="password" name="password"><br></div></div>
+    
+    <!--First name: <input type="text" name="fname"><br>
     Last name: <input type="text" name="lname"><br>
     Email: <input type="text" name="email"><br>
     Phone: <input type="text" name="phone"><br>
     Birthday: <input type="text" name="birthday"><br>
     Gender: <input type="text" name="gender"><br>
-    Password: <input type="password" name="password"><br>
-    <input type="submit" value="Submit form">
+    Password: <input type="password" name="password"><br>-->
+    <input type="submit" value="Submit">
 </form>
 
-
+</div>
+</div>
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>

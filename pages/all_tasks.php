@@ -1,3 +1,6 @@
+<?php
+    include 'header.php';    
+?> 
 <!doctype html>
 
 <html lang="en">
@@ -16,6 +19,9 @@
 </head>
 
 <body>
+<div class="container">
+<div class="row">
+<div class="col-sm-1"></div>
 <form action="index.php?page=tasks&action=insertTask" method="post" id="formInsert">
     <button type="submit" form="formInsert" value="insert">Insert New Task</button>
 </form>
@@ -26,7 +32,8 @@ print utility\htmlTable::generateTableFromMultiArray($data);
 
 
 ?>
-
+</div>
+</div>
 
 <script src="js/scripts.js"></script>
 </body>

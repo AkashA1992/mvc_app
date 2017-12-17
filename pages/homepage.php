@@ -13,21 +13,21 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
+    <?php
+    include 'header.php';    
+    ?> 
 </head>
 
 <body>
 
 
 
-    <?php
-    include 'header.php';
-    //this how to print some data;
-    //echo $data['site_name'];
-
-    ?> 
+    
 <div class="container">
-<!--<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
-<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>-->
+
+<h3><a href="index.php?page=accounts&action=register">Register</a></h3>
+<br>
+<br>
 
 <form action="index.php?page=accounts&action=login" method="POST">
 
@@ -43,7 +43,7 @@
 
 
 </form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
+
 
 </div>
 <script src="js/scripts.js"></script>
