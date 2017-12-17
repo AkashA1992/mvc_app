@@ -7,7 +7,7 @@
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
     <!--[if lt IE 9]>
@@ -18,14 +18,14 @@
 <body>
 
 
-<h1>
+
     <?php
-
+    include 'header.php';
     //this how to print some data;
-    echo $data['site_name'];
+    //echo $data['site_name'];
 
-    ?> </h1>
-
+    ?> 
+<div class="container">
 <!--<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>-->
 
@@ -45,7 +45,7 @@
 </form>
 <h1><a href="index.php?page=accounts&action=register">Register</a></h1>
 
-
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>

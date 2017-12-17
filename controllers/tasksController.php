@@ -37,6 +37,34 @@ class tasksController extends http\controller
         self::getTemplate('all_tasks', $records);
 
     }
+    
+    public static function getAllTask()
+    {        
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        //print($temp);
+        //$_SESSION["userID"];
+        //print_r($_SESSION["userID"]);
+        $records = todos::findTask($_SESSION["userID"]);
+        
+        //print_r($records);
+        /*session_start();
+           if(key_exists('userID',$_SESSION)) {
+               $userID = $_SESSION['userID'];
+           } else {
+
+               echo 'you must be logged in to view tasks';
+           }
+        $userID = $_SESSION['userID'];
+
+        $records = todos::findTasksbyID($userID);
+        */
+        self::getTemplate('all_tasks', $records);
+        //return $records;
+    }
+        
     //to call the show function the url is called with a post to: index.php?page=task&action=create
     //this is a function to create new tasks
 
@@ -92,8 +120,12 @@ class tasksController extends http\controller
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        session_start();
+        //print_r($_SESSION["userID"]);
+        $user->userid = $_SESSION["userID"];
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+        self::getAllTask();
+        //header("Location: index.php?page=tasks&action=all");
 
     }
     

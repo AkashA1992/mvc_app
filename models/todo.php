@@ -9,6 +9,8 @@ final class todo extends database\model
     public $duedate;
     public $message;
     public $isdone;
+    public $userid;
+    
     protected static $modelName = 'todo';
 
     public static function getTablename()

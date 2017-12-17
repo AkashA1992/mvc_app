@@ -62,11 +62,13 @@ class accountsController extends http\controller
             //Turn the set password function into a static method on a utility class.
             $user->password = account::setPassword($_POST['password']);
             $user->save();
+            session_start();
+                $_SESSION["userID"] = $user->id;
 
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+            header("Location: index.php?page=accounts&action=login");
 
         } else {
             //You can make a template for errors called error.php
@@ -131,10 +133,12 @@ class accountsController extends http\controller
 
                 session_start();
                 $_SESSION["userID"] = $user->id;
-                
+                header("Location: index.php?page=tasks&action=getAllTask");
+                //$tasks=tasksController::getAllTask();
+                //print_r($tasks);
                 //forward the user to the show all todos page
                 //print_r($user->id);
-                self::getTemplate('loggedIn', $user);
+                //self::getTemplate('loggedIn', $tasks);
             } else {
                 echo 'password does not match';
             }
