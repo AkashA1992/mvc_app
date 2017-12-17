@@ -24,6 +24,7 @@
 
 
 <?php
+if(!empty($data))
 print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
 

@@ -39,6 +39,7 @@
 <?php
 //this is how you print something
 
+if(!empty($data))
 print utility\htmlTable::generateTableFromMultiArray($data);
 
 

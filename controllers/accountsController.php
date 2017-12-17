@@ -67,7 +67,7 @@ class accountsController extends http\controller
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=login");
+            header("Location: index.php?page=tasks&action=getAllTask");
 
         } else {
             //You can make a template for errors called error.php
@@ -112,6 +112,7 @@ class accountsController extends http\controller
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
         $user->save();
+        $_SESSION["userName"]=$user->fname;
         header("Location: index.php?page=tasks&action=getAllTask");
 
     }
@@ -152,6 +153,7 @@ class accountsController extends http\controller
 
                 session_start();
                 $_SESSION["userID"] = $user->id;
+                $_SESSION["userName"] = $user->fname;
                 header("Location: index.php?page=tasks&action=getAllTask");
                 //$tasks=tasksController::getAllTask();
                 //print_r($tasks);
