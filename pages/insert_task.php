@@ -3,6 +3,15 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-1"></div>
+<div class="col-sm-11"><h3>Insert New Task!!!</h3></div>
+
+</div>
+<br>
+<hr>
+<br>
+
+<div class="row">
+<div class="col-sm-1"></div>
 <div class="col-sm-5">
 
 <form action="index.php?page=tasks&action=save" method="post">

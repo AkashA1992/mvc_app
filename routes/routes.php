@@ -24,6 +24,7 @@ class routes
         $routes[]=self::create('GET','all','accounts','accountsController','all');
         $routes[]=self::create('GET','show','accounts','accountsController','show');
         $routes[]=self::create('POST','login','accounts','accountsController','login');
+        $routes[]=self::create('GET','logout','accounts','accountsController','logout');
         $routes[]=self::create('POST','delete','tasks','tasksController','delete');        
         $routes[]=self::create('POST','insertTask','tasks','tasksController','insertTask');
         $routes[]=self::create('POST','delete','accounts','accountsController','delete');

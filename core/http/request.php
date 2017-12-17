@@ -24,6 +24,8 @@ class request
         if (!empty($_GET['page'])) {
             $page = $_GET['page'];
         }
+        session_start();
+        $_SESSION['page']=$page;        
         return $page;
     }
 
@@ -44,6 +46,9 @@ class request
         if (!empty($_GET['action'])) {
             $action = $_GET['action'];
         }
+        
+        //session_start();
+        $_SESSION['action']=$action;
         return $action;
     }
 }

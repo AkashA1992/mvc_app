@@ -22,8 +22,17 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-1"></div>
+<div class="col-sm-11"><h3>Insert New Task!!!</h3></div>
+
+</div>
+<br>
+<hr>
+<br>
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-11">
 <form action="index.php?page=tasks&action=insertTask" method="post" id="formInsert">
-    <button type="submit" form="formInsert" value="insert">Insert New Task</button>
+    <button type="submit" form="formInsert" value="insert">+ Add New Task</button>
 </form>
 <?php
 //this is how you print something
@@ -32,6 +41,7 @@ print utility\htmlTable::generateTableFromMultiArray($data);
 
 
 ?>
+</div>
 </div>
 </div>
 

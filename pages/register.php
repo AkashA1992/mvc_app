@@ -18,6 +18,7 @@
 
 <body>
 <div class="container">
+<div class="wrapper">
 <div class="row">
 <div class="col-sm-1"></div>
 <div class="col-sm-3"><h3>Account Registration</h3></div>
@@ -48,6 +49,7 @@
     <input type="submit" value="Submit">
 </form>
 
+</div>
 </div>
 </div>
 </div>

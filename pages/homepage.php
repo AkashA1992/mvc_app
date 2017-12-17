@@ -25,24 +25,37 @@
     
 <div class="container">
 
-<h3><a href="index.php?page=accounts&action=register">Register</a></h3>
-<br>
-<br>
+
 
 <form action="index.php?page=accounts&action=login" method="POST">
 
     <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required>
-
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
-        <button type="submit">Login</button>
+    <div class="row">
+    
+        <div class="col-sm-1"><label><b>Username</b></label></div>
+        <div class="col-sm-2"><input type="text" placeholder="Enter Username" name="email" required></div>
+    
+    </div>
+    <br>
+    <div class="row">
+    
+        <div class="col-sm-1"><label><b>Password</b></label></div>
+        <div class="col-sm-2"><input type="password" placeholder="Enter Password" name="password" required></div>
+    
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-2">
+            <button type="submit">Login</button>
+        </div>
+    </div>
     </div>
 
 
 </form>
+<br>
+<br>
+<h3><a href="index.php?page=accounts&action=register">Register</a></h3>
 
 
 </div>

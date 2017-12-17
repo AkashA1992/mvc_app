@@ -8,11 +8,10 @@
       <div class="col-sm-8">              
         <h3>Final Project WSD!!</h3>
       </div>
-      <div class="col-sm-2">
-        <?php if(true) {
-            echo '<a href="#">Login</a>';
-          }else{
-            echo '<a href="#">Logout</a>';
+      <div class="col-sm-2">        
+        <?php        
+        if($_SESSION['page']!='homepage' && $_SESSION['action']!='register') {
+            echo '<a href="index.php?page=accounts&action=logout">Logout</a>';
           }
         ?>
       </div>
