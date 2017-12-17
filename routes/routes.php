@@ -34,7 +34,7 @@ class routes
         $routes[]=self::create('GET','register','accounts','accountsController','register');
         $routes[]=self::create('POST','register','accounts','accountsController','store');
         $routes[]=self::create('GET','getAllTask','tasks','tasksController','getAllTask');     
-           
+        $routes[]=self::create('GET','profilePage','accounts','accountsController','profilePage');   
         return $routes;
     }
 

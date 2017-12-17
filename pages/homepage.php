@@ -55,10 +55,36 @@
 </form>
 <br>
 <br>
+<div class="row">
 <h3><a href="index.php?page=accounts&action=register">Register</a></h3>
+</div>
 
 
 </div>
+
+
+<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+
+
 <script src="js/scripts.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

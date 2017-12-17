@@ -79,6 +79,20 @@ class accountsController extends http\controller
         }
 
     }
+    
+    
+    
+    public static function profilePage(){
+    
+      if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        $records = accounts::findOne($_SESSION["userID"]);
+        self::getTemplate('show_account',$records);
+        
+          
+    } 
 
     public static function edit()
     {
@@ -98,7 +112,7 @@ class accountsController extends http\controller
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
         $user->save();
-        header("Location: index.php?page=accounts&action=all");
+        header("Location: index.php?page=tasks&action=getAllTask");
 
     }
 

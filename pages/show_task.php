@@ -19,18 +19,15 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-1"></div>
-<div class="col-sm-11"><h3>Edit Task!!!</h3></div>
 
-</div>
-<br>
-<hr>
-<br>
-<div class="row">
-<div class="col-sm-1"></div>
-<div class="col-sm-11">
+
+
+
 <?php
 print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
+
+
 
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
@@ -54,7 +51,6 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
-</div>
 </div>
 </div>
 

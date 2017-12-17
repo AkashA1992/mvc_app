@@ -11,6 +11,7 @@
       <div class="col-sm-2">        
         <?php        
         if($_SESSION['page']!='homepage' && $_SESSION['action']!='register') {
+            echo '<a href="index.php?page=accounts&action=profilePage">Profile</a>   |   ';
             echo '<a href="index.php?page=accounts&action=logout">Logout</a>';
           }
         ?>
