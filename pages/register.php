@@ -27,6 +27,12 @@
 <br>
 <div class="row">
 <div class="col-sm-1"></div>
+        <div class="col-sm-3 alert">
+        <label ><?php echo $data['error']; ?></label>
+        </div>
+    </div>
+<div class="row">
+<div class="col-sm-1"></div>
 <div class="col-sm-5">
 
 <form action="index.php?page=accounts&action=register" method="post">

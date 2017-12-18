@@ -67,8 +67,10 @@ class accountsController extends http\controller
             //You can make a template for errors called error.php
             // and load the template here with the error you want to show.
            // echo 'already registered';
-            $error = 'already registered';
-            self::getTemplate('error', $error);
+           $templateData['error']="Already registered!!!";
+                self::getTemplate('register',$templateData);
+            //$error = 'already registered';
+            //self::getTemplate('error', $error);
 
         }
 
