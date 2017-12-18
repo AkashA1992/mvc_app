@@ -138,7 +138,8 @@ class accountsController extends http\controller
 
 
         if ($user == FALSE) {
-            echo 'user not found';
+                $templateData['error']="User not found";
+                self::getTemplate('homepage',$templateData);
         } else {
 
             if($user->checkPassword($_POST['password']) == TRUE) {
