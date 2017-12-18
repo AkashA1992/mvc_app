@@ -46,9 +46,13 @@
     Birthday: <input type="text" name="birthday"><br>
     Gender: <input type="text" name="gender"><br>
     Password: <input type="password" name="password"><br>-->
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit">    
 </form>
 
+<hr>
+</div>
+<div style="font-size:25px;">
+<a href="index.php" style="padding-left:20px;">Login Page</a>
 </div>
 </div>
 </div>
