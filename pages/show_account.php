@@ -34,14 +34,25 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 </div>
 <hr>
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
+    <div class="row"><div class="col-sm-2">First name: </div><div class="col-sm-2"><input type="text" name="fname" value="<?php echo $data->fname; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Last name: </div><div class="col-sm-2"><input type="text" name="lname" value="<?php echo $data->lname; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Email: </div><div class="col-sm-2"><input type="text" name="email" value="<?php echo $data->email; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Phone: </div><div class="col-sm-2"><input type="text" name="phone" value="<?php echo $data->phone; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Birthday: </div><div class="col-sm-2"><input type="text" name="birthday" value="<?php echo $data->birthday; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Gender: </div><div class="col-sm-2"><input type="text" name="gender" value="<?php echo $data->gender; ?>" required><br></div></div>
 
-    First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
+
+
+
+
+
+    <!--First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
 
     Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>"><br>
     Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
     Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
-    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
+    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>-->
     <input type="submit" value="Submit form">
 </form>
 
