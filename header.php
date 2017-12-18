@@ -14,8 +14,18 @@
         ?>        
         
         <?php
-            echo '<div style="text-align:center;"><a href="index.php?page=accounts&action=profilePage"><img src="images/Profile_pic.png" width="50px;" height="50px;"/> </div><div style="text-align:center;">'.$_SESSION["userName"].'</a>   |   ';
+            $userName='';
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+            if (isset($_SESSION['userName']) && !empty($_SESSION['userName'])) {$userName=$_SESSION["userName"];
+            echo '<div style="text-align:center;"><a href="index.php?page=accounts&action=profilePage"><img src="images/Profile_pic.png" width="50px;" height="50px;"/> </div><div style="text-align:center;">'.$userName.'</a>   |   ';
             echo '<a href="index.php?page=accounts&action=logout">Logout</a></div>';
+            }else{
+                echo '<div style="text-align:center;"><a href="index.php?page=accounts&action=profilePage"><img src="images/Profile_pic.png" width="50px;" height="50px;"/> </div><div style="text-align:center;"></a>';
+                echo '<a href="index.php?page=accounts&action=logout">LogIn</a></div>';
+            }
+            
         ?>
         
           <?php
