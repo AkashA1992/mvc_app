@@ -63,6 +63,7 @@ class accountsController extends http\controller
             $user->save();
             session_start();
                 $_SESSION["userID"] = $user->id;
+                $_SESSION["userName"]=$user->fname;
 
             //you may want to send the person to a
             // login page or create a session and log them in

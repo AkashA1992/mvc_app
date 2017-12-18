@@ -120,7 +120,9 @@ class tasksController extends http\controller
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         //print_r($_SESSION["userID"]);
         $user->userid = $_SESSION["userID"];
         $user->save();

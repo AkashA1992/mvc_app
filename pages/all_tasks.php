@@ -44,6 +44,7 @@ print utility\htmlTable::generateTableFromMultiArray($data);
 
 
 ?>
+<hr>
 </div>
 </div>
 </div>

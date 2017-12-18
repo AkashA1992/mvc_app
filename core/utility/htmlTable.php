@@ -17,7 +17,7 @@ class htmlTable
         //this gets the page being viewed so that the table routes requests to the correct controller
         $referingPage = $_REQUEST['page'];
         foreach ($fieldHeadings as $value) {
-            if($value != 'password'){
+            if($value != 'password' && $value != 'userid'){
             $tableGen .= '<th>' . $value . '</th>';
             }
         }
@@ -25,10 +25,10 @@ class htmlTable
         foreach ($array as $record) {
             $tableGen .= '<tr>';
             foreach ($record as $key => $value) {
-                if ($key == 'id') {
+                if ($key == 'id' ) {
                     $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>';
                 } else {
-                    if($key != 'password'){
+                    if($key != 'password' && $key != 'userid'){
                         $tableGen .= '<td>' . $value . '</td>';
                     }
                 }
@@ -43,11 +43,11 @@ class htmlTable
 
     public static function generateTableFromOneRecord($innerArray)
     {
-        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen = '<table class="table" cellpadding="10"><tr>';
 
         $tableGen .= '<tr>';
         foreach ($innerArray as $innerRow => $value) {
-            if ($innerRow != 'id') {
+            if ($innerRow != 'id' && $innerRow != 'password' && $innerRow != 'userid') {
                     $tableGen .= '<th>' . $innerRow . '</th>';
                 }
         }
@@ -55,7 +55,7 @@ class htmlTable
 
         foreach ($innerArray as $innerRow=>$value) {
             
-            if ($innerRow != 'id') {                
+            if ($innerRow != 'id' && $innerRow != 'password' && $innerRow != 'userid') {                
                     $tableGen .= '<td>' . $value . '</td>';
                 }           
         }

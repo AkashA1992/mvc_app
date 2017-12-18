@@ -1,3 +1,6 @@
+<?php
+    include 'header.php';    
+?> 
 <!doctype html>
 
 <html lang="en">
@@ -16,13 +19,20 @@
 </head>
 
 <body>
+<div class="container">
+<div class="row">
 
+<div class="col-sm-11"><h3>Edit Profile!!!</h3></div>
+
+</div> 
+<div class="row">   
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 if(!empty($data))
 print utility\htmlTable::generateTableFromOneRecord($data);
 ?>
-
+</div>
+<hr>
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
 
     First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>

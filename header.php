@@ -14,7 +14,7 @@
         ?>        
         
         <?php
-            echo '<div><a href="index.php?page=accounts&action=profilePage"><img src="images/Profile_pic.png" /> </div><div style="padding-left:15px;">'.$_SESSION["userName"].'</a>   |   ';
+            echo '<div style="text-align:center;"><a href="index.php?page=accounts&action=profilePage"><img src="images/Profile_pic.png" width="50px;" height="50px;"/> </div><div style="text-align:center;">'.$_SESSION["userName"].'</a>   |   ';
             echo '<a href="index.php?page=accounts&action=logout">Logout</a></div>';
         ?>
         
