@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 11/27/17
- * Time: 5:32 PM
- */
-
 
 //each page extends controller and the index.php?page=tasks causes the controller to be called
 class accountsController extends http\controller
@@ -162,7 +155,8 @@ class accountsController extends http\controller
                 //print_r($user->id);
                 //self::getTemplate('loggedIn', $tasks);
             } else {
-                echo 'password does not match';
+                $templateData['error']="Password does not match";
+                self::getTemplate('homepage',$templateData);
             }
 
         }

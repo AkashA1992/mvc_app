@@ -21,9 +21,6 @@
 </head>
 
 <body>
-
-
-
     
 <div class="row">
 <div class="col-sm-4"></div>
@@ -51,8 +48,13 @@
         <div class="col-sm-2">
             <button type="submit">Login</button>
         </div>        
-    </div>    
-    <br>
+    </div>  
+    <div class="row">
+        <div class="alert">
+        <label ><?php echo $data['error']; ?></label>
+        </div>
+    </div> 
+    
     <br>
     <br>
     <div class="row">

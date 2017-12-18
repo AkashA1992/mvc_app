@@ -10,7 +10,7 @@
       </div>
       <div class="col-sm-2">        
         <?php        
-        if($_SESSION['page']!='homepage' && $_SESSION['action']!='register') {
+        if($_SESSION['page']!='homepage' && $_SESSION['action']!='register' && $_SESSION['action']!='login') {
         ?>        
         
         <?php
