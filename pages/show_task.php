@@ -36,12 +36,12 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    <div class="row"><div class="col-sm-2">Owner Email: </div><div class="col-sm-2"><input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>"><br></div></div>
-    <div class="row"><div class="col-sm-2">Owner Id: </div><div class="col-sm-2"><input type="text" name="ownerid" value="<?php echo $data->ownerid; ?>"><br></div></div>
-    <div class="row"><div class="col-sm-2">Create Date: </div><div class="col-sm-2"><input type="text" name="createddate" value="<?php echo $data->createddate; ?>"><br></div></div>
-    <div class="row"><div class="col-sm-2">Due Date: </div><div class="col-sm-2"><input type="text" name="duedate" value="<?php echo $data->duedate; ?>"><br></div></div>
-    <div class="row"><div class="col-sm-2">Message: </div><div class="col-sm-2"><input type="text" name="message" value="<?php echo $data->message; ?>"><br></div></div>
-    <div class="row"><div class="col-sm-2">IsDone: </div><div class="col-sm-2"><input type="text" name="isdone" value="<?php echo $data->isdone; ?>"><br></div></div>
+    <div class="row"><div class="col-sm-2">Owner Email: </div><div class="col-sm-2"><input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>" required ><br></div></div>
+    <div class="row"><div class="col-sm-2">Owner Id: </div><div class="col-sm-2"><input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>" required ><br></div></div>
+    <div class="row"><div class="col-sm-2">Create Date: </div><div class="col-sm-2"><input type="text" name="createddate" value="<?php echo $data->createddate; ?>" required ><br></div></div>
+    <div class="row"><div class="col-sm-2">Due Date: </div><div class="col-sm-2"><input type="text" name="duedate" value="<?php echo $data->duedate; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">Message: </div><div class="col-sm-2"><input type="text" name="message" value="<?php echo $data->message; ?>" required><br></div></div>
+    <div class="row"><div class="col-sm-2">IsDone: </div><div class="col-sm-2"><input type="number" name="isdone" value="<?php echo $data->isdone; ?>" required><br></div></div>
 
     <input type="submit" value="Update Record">
 </form>

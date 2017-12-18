@@ -16,12 +16,12 @@
 
 <form action="index.php?page=tasks&action=save" method="post">
 
-    <div class="row"><div class="col-sm-3">Owner Email: </div><div class="col-sm-2"><input type="text" name="owneremail" value=""><br></div></div>
-    <div class="row"><div class="col-sm-3">Owner Id: </div><div class="col-sm-2"><input type="text" name="ownerid" value=""><br></div></div>
-    <div class="row"><div class="col-sm-3">Create Date: </div><div class="col-sm-2"><input type="text" name="createddate" value=""><br></div></div>
-    <div class="row"><div class="col-sm-3">Due Date: </div><div class="col-sm-2"><input type="text" name="duedate" value=""><br></div></div>
-    <div class="row"><div class="col-sm-3">Message: </div><div class="col-sm-2"><input type="text" name="message" value=""><br></div></div>
-    <div class="row"><div class="col-sm-3">IsDone: </div><div class="col-sm-2"><input type="text" name="isdone" value=""><br></div></div>
+    <div class="row"><div class="col-sm-3">Owner Email: </div><div class="col-sm-2"><input type="email" name="owneremail" value="" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Owner Id: </div><div class="col-sm-2"><input type="number" name="ownerid" value="" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Create Date: </div><div class="col-sm-2"><input type="text" name="createddate" value="" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Due Date: </div><div class="col-sm-2"><input type="text" name="duedate" value="" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Message: </div><div class="col-sm-2"><input type="text" name="message" value="" required><br></div></div>
+    <div class="row"><div class="col-sm-3">IsDone: </div><div class="col-sm-2"><input type="number" name="isdone" value="" required><br></div></div>
     <input type="submit" value="Insert Record">
 </form>
 

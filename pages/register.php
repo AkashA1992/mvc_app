@@ -31,13 +31,13 @@
 
 <form action="index.php?page=accounts&action=register" method="post">
 
-    <div class="row"><div class="col-sm-3">First name: </div><div class="col-sm-2"><input type="text" name="fname"><br></div></div>
-    <div class="row"><div class="col-sm-3">Last name: </div><div class="col-sm-2"><input type="text" name="lname"><br></div></div>
-    <div class="row"><div class="col-sm-3">Email: </div><div class="col-sm-2"><input type="text" name="email"><br></div></div>
-    <div class="row"><div class="col-sm-3">Phone: </div><div class="col-sm-2"><input type="text" name="phone"><br></div></div>
-    <div class="row"><div class="col-sm-3">Birthday: </div><div class="col-sm-2"><input type="text" name="birthday"><br></div></div>
-    <div class="row"><div class="col-sm-3">Gender: </div><div class="col-sm-2"><input type="text" name="gender"><br></div></div>
-    <div class="row"><div class="col-sm-3">Password: </div><div class="col-sm-2"><input type="password" name="password"><br></div></div>
+    <div class="row"><div class="col-sm-3">First name: </div><div class="col-sm-2"><input type="text" name="fname" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Last name: </div><div class="col-sm-2"><input type="text" name="lname" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Email: </div><div class="col-sm-2"><input type="email" name="email" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Phone: </div><div class="col-sm-2"><input type="number" maxlength="10" name="phone" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Birthday: </div><div class="col-sm-2"><input type="text" name="birthday" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Gender: </div><div class="col-sm-2"><input type="text" name="gender" required><br></div></div>
+    <div class="row"><div class="col-sm-3">Password: </div><div class="col-sm-2"><input type="password" name="password" required><br></div></div>
     
     <!--First name: <input type="text" name="fname"><br>
     Last name: <input type="text" name="lname"><br>
